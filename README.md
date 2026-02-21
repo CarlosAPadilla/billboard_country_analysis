@@ -41,13 +41,6 @@ gender-guesser
 matplotlib
 seaborn
 ```
-
-Install Playwright browsers after installing the package:
-
-```
-playwright install
-```
-
 ---
 
 ## Methodology
@@ -103,7 +96,7 @@ Search queries for the Genius API were then built from the cleaned fields by low
 
 ---
 
-## 3. Release Year Retrieval with Genius API
+## 3. Release Year with Genius API
 
 Release years are not available on the Billboard page, so a two-step Genius API lookup was used to retrieve them for each song.
 
@@ -143,11 +136,11 @@ For artists that pass the keyword check, the first word of the artist name is ex
 
 Three charts were produced using matplotlib and seaborn.
 
-**Songs by Decade** — a bar chart showing the count of top 100 songs by the decade in which they were released. The 1970s dominate with 23 songs, followed by the 1980s with 18. The drop-off in the 2000s and 2010s suggests Billboard's list is heavily weighted toward an older country era, likely a period the compilers of this list have personal experience with.
+**Songs by Decade** — A bar chart showing the count of top 100 songs by the decade in which they were released. The 1970s dominate with 23 songs, followed by the 1980s with 18. The drop-off in the 2000s and 2010s suggests Billboard's list is heavily weighted toward an older country era, likely a period the compilers of this list have personal experience with.
 
-**Songs by Gender** — a bar chart showing the overall breakdown across the full list. Male artists account for 60 songs, female artists for 22, and groups for 18. The gap between male and female representation reflects country music's historically male-dominated industry structure.
+**Songs by Gender** — A bar chart showing the overall breakdown across the full list. Male artists account for 60 songs, female artists for 22, and groups for 18. The gap between male and female representation reflects country music's historically male-dominated industry structure.
 
-**Gender Breakdown by Decade** — a stacked bar chart that combines both dimensions. Female representation is essentially absent before the 1960s and peaks in the 1970s before declining. Group representation grows steadily through the 1980s and 1990s. This chart shows how the makeup of the list shifts depending on the era.
+**Gender Breakdown by Decade** — A stacked bar chart that combines both dimensions. Female representation is essentially absent before the 1960s and peaks in the 1970s before declining. Group representation grows steadily through the 1980s and 1990s. This chart shows how the makeup of the list shifts depending on the era.
 
 ---
 
@@ -164,10 +157,3 @@ Then run the script from the terminal:
 ```
 python3 CountryScript2026.py
 ```
-
-The script will open a browser window to scrape Billboard, then run the full pipeline automatically. Three chart images and the final dataset will be saved to the working directory:
-
-- `songs_by_decade.png`
-- `songs_by_gender.png`
-- `gender_by_decade.png`
-- `billboard_with_years.csv`
